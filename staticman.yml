@@ -1,0 +1,102 @@
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
+comments:
+  # (*) REQUIRED
+  #
+  # Names of the fields the form is allowed to submit. If a field that is
+  # not here is part of the request, an error will be thrown.
+  allowedFields: ["name", "email", "body"]
+
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted.
+  allowedOrigins: ["localhost" "hobotest.netlify.com"]
+
+  # (*) REQUIRED
+  #
+  # Name of the branch being used. Must match the one sent in the URL of the
+  # request.
+  branch: "master"
+
+  # List of fields to be populated automatically by Staticman and included in
+  # the data file. Keys are the name of the field. The value can be an object
+  # with a `type` property, which configures the generated field, or any value
+  # to be used directly (e.g. a string, number or array)
+  generatedFields:
+    date:
+      type: date
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "json"
+
+  # Whether entries need to be appproved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: true
+
+  # Name of the site. Used in notification emails.
+  name: "Hobo Test"
+
+  # (*) REQUIRED
+  #
+  # Destination path (directory) for the data files. Accepts placeholders.
+  path: "data/comments/{options.entryId}"
+
+  # (*) REQUIRED
+  #
+  # Destination path (filename) for the data files. Accepts placeholders.
+  filename: "comment-{@timestamp}"
+
+  # Names of required files. If any of these isn't in the request or is empty,
+  # an error will be thrown.
+  requiredFields: ["name", "body"]
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    # Enable notifications
+    enabled: true
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    apiKey: "DTwhq72vijr+9XduScboL74KCZtcCN1ppi5oU+caSG2ONYX13Ue5Gdw2RYUkHXm5Doo2UAc4Z3lMjFYpXMo4RHQjiVRvp0wDwFtxxuXa3pQSbvwHU9Mp16npzrYr5CquN6G4veqrfzXRSmTvNn5eU0G14LwWzB/3QdpTNI5O03Q="
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    domain: "mdIOkw/+PMWnGSCtWUQClhdr2+Sk0TzK6dP+ietiu1wJlJfLvVXAxeKx1bL7uXSbR5712FZGV2XIIqVf/PUfrz6beqbxJnPTUxWTnjuVVJppkl1Rh9dYhZ9Q5OLQjw/xRbBZLmcSLnzYr6E3aZsrNj5qjzuaVsyAOOtAYWpKRic="
+
+  # List of transformations to apply to any of the fields supplied. Keys are
+  # the name of the field and values are possible transformation types.
+  transforms:
+    email: md5
+
+reCaptcha:
+  enabled: true
+  siteKey: "6Le5eCgUAAAAAI3x5sDCrbtIJcYbQ4S5y1tCMCuG"
+  secret: "pZxw/5TAF0lRc6VfpihA8vol/xrlZC4O8wRY4p9PG+EWcbnY8SUyu30WuKoh+d8tAexKki97io6khS/JkXTRaL8Udo2zIKMKfmdAMK7VwVXZrPyv65vKeqRQpHbamHr4Mpg5cKSlaE3wOTgm9pw6/MM+EfyxKv6qp2R6kNK4vNE="
+  
+posts:
+  allowedFields: ["title", "body"]
+  allowedOrigins: ["localhost", "hobotest.netlify.com"]
+  branch: "master"
+  generatedFields:
+    date:
+      type: date
+    slug:
+      type: slugify
+      options:
+        field: title
+    tags: ["user-generated"]
+  format: "frontmatter"
+  moderation: true
+  name: "Hobo Test"
+  path: "content/post"
+  filename: "{fields.slug}"
+  requiredFields: ["title", "body"]
+  transforms:
+    body: "frontmatterContent"
