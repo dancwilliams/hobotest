@@ -9,8 +9,6 @@
     <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ .Site.Params.recaptcha_siteKey }}">
     <input type="hidden" name="options[reCaptcha][secret]" value="{{ .Site.Params.recaptcha_secret }}">
 
-    {{ printf "Slug: %#v" .File.Dir }}
-
     <fieldset>
       <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name">
     </fieldset>
