@@ -5,7 +5,7 @@
     <input type="hidden" name="options[redirect]" value="{{ .Site.Params.staticman_redirect }}">
     <input type="hidden" name="options[entryId]" value="{{ .File.BaseFileName }}">
     <input type="hidden" name="options[origin]" value="{{ .Permalink }}">
-    <input type="hidden" name="options[parent]" value="{{ .Permalink }}">
+    <input type="hidden" name="options[parent]" value="{{ .UniqueID }}">
     <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ .Site.Params.recaptcha_siteKey }}">
     <input type="hidden" name="options[reCaptcha][secret]" value="{{ .Site.Params.recaptcha_secret }}">
 
