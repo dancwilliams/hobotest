@@ -16,6 +16,7 @@
           </div>
           {{ .body | markdownify }}
         </div>
+        <a href="#{{ $index }}"></a>
         <div class="comment__reply">
           <a rel="nofollow" class="btn" href="#{{ $index }}">Reply to {{ .name }}</a>
         </div>
