@@ -2,7 +2,7 @@
   <h3>Say something</h3>
 
   <form class="post-new-comment" method="POST" action="{{ .Site.Params.staticman_api }}">
-    <input type="hidden" name="options[redirect]" value="{{ .Site.Params.staticman_redirect }}">
+    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#post-submitted">
     <input type="hidden" name="options[entryId]" value="{{ .File.BaseFileName }}">
     <input type="hidden" name="options[origin]" value="{{ .Permalink }}">
     <input type="hidden" name="options[parent]" value="{{ .File.BaseFileName }}">
