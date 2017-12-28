@@ -4,7 +4,7 @@
 # another one to handle posts.
 comments:
 
-  commitMessage     : "New comment in {options.slug}"
+  commitMessage: "New comment in {options.slug}"
   # (*) REQUIRED
   #
   # Names of the fields the form is allowed to submit. If a field that is
