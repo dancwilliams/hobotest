@@ -21,11 +21,12 @@ pygmentCodeFences = true
   rss = true
   comments = false
   #gcse = "" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
-  staticman = true
-  recaptcha_siteKey = "6Le5eCgUAAAAAI3x5sDCrbtIJcYbQ4S5y1tCMCuG"
-  recaptcha_secret = "pZxw/5TAF0lRc6VfpihA8vol/xrlZC4O8wRY4p9PG+EWcbnY8SUyu30WuKoh+d8tAexKki97io6khS/JkXTRaL8Udo2zIKMKfmdAMK7VwVXZrPyv65vKeqRQpHbamHr4Mpg5cKSlaE3wOTgm9pw6/MM+EfyxKv6qp2R6kNK4vNE="
-  staticman_api = "https://api.staticman.net/v2/entry/dancwilliams/hobotest/master/comments"
-  staticman_redirect = "http://hobotest.netlify.com/comment_confirm"
+  [Params.staticman]
+  api = "https://api.staticman.net/v2/entry/dancwilliams/hobotest/master/comments"
+  pulls = "https://github.com/dancwilliams/hobotest/pulls"
+  [Params.staticman.recaptcha]
+    sitekey = "6Le5eCgUAAAAAI3x5sDCrbtIJcYbQ4S5y1tCMCuG"
+    secret = "pZxw/5TAF0lRc6VfpihA8vol/xrlZC4O8wRY4p9PG+EWcbnY8SUyu30WuKoh+d8tAexKki97io6khS/JkXTRaL8Udo2zIKMKfmdAMK7VwVXZrPyv65vKeqRQpHbamHr4Mpg5cKSlaE3wOTgm9pw6/MM+EfyxKv6qp2R6kNK4vNE=""
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
