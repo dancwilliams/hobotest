@@ -1,6 +1,7 @@
 ---
 title: "Test 1"
 date: 2017-07-10T12:35:30-05:00
+comments: true
 draft: false
 ---
 
