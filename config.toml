@@ -24,6 +24,7 @@ pygmentCodeFences = true
   [Params.staticman]
   api = "https://api.staticman.net/v2/entry/dancwilliams/hobotest/master/comments"
   pulls = "https://github.com/dancwilliams/hobotest/pulls"
+  notifications = true
   [Params.staticman.recaptcha]
     sitekey = "6Le5eCgUAAAAAI3x5sDCrbtIJcYbQ4S5y1tCMCuG"
     secret = "pZxw/5TAF0lRc6VfpihA8vol/xrlZC4O8wRY4p9PG+EWcbnY8SUyu30WuKoh+d8tAexKki97io6khS/JkXTRaL8Udo2zIKMKfmdAMK7VwVXZrPyv65vKeqRQpHbamHr4Mpg5cKSlaE3wOTgm9pw6/MM+EfyxKv6qp2R6kNK4vNE="
