@@ -65,18 +65,18 @@
     </div>
   </fieldset>
 
-  {{ if .Site.Params.staticman.recaptcha }}
-  <fieldset>
-    <div class="g-recaptcha" data-sitekey="{{ .Site.Params.staticman.recaptcha.sitekey }}"></div>
-  </fieldset>
-  {{ end }}
-
   {{ if .Site.Params.staticman.notifications }}
   <fieldset>
     <div class="notify-me">
       <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
       Send me an email when someone comments on this post.
     </div>
+  </fieldset>
+  {{ end }}
+
+  {{ if .Site.Params.staticman.recaptcha }}
+  <fieldset>
+    <div class="g-recaptcha" data-sitekey="{{ .Site.Params.staticman.recaptcha.sitekey }}"></div>
   </fieldset>
   {{ end }}
 
