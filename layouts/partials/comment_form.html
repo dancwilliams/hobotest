@@ -9,7 +9,7 @@
     <input type="hidden" name="options[slug]" value="{{ .Permalink }}">
     <input type="hidden" name="options[origin]" value="{{ .Permalink }}">
     <input type="hidden" name="options[parent]" value="{{ .File.BaseFileName }}">
-    <input type="hidden" name="options[reply_to]" value="">
+    <input type="hidden" id="reply_id" name="options[reply_to]" value="">
     <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ .Site.Params.recaptcha_siteKey }}">
     <input type="hidden" name="options[reCaptcha][secret]" value="{{ .Site.Params.recaptcha_secret }}">
 
@@ -72,6 +72,6 @@
 
 <script>
    function changeValue(elementName, newValue){
-     document.getElementsByName(elementName)[0].value=newValue;
+     document.getElementById(elementName).value=newValue;
     }
 </script>
