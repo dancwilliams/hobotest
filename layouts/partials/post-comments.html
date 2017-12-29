@@ -18,7 +18,7 @@
         </div>
         {{ if not .reply_to }}
           <div class="comment__reply">
-            <a id="{{ ._id }}" class="btn-info" href="#comment-form" onclick="changeValue('reply_to', '{{ ._id }}')">Reply to {{ .name }}</a>
+            <a id="{{ ._id }}" class="btn-info" href="#comment-form" onclick="changeValue('options[reply_to]', '{{ ._id }}')">Reply to {{ .name }}</a>
           </div>
         {{ end }}
       {{ end }}       
