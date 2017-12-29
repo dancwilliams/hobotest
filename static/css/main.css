@@ -757,6 +757,17 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
   -webkit-appearance: none;
 }
 
+.btn-info {
+  border: 1px solid #5e60f7;
+  background-color: #5e60f7;
+  color: white;
+  display: inline-block;
+  font: inherit;
+  padding: 10px;
+  min-width: 50px;
+  -webkit-appearance: none;
+}
+
 .btn:hover {
   border: 2px solid #F76C5E !important;
   background-color: white;
