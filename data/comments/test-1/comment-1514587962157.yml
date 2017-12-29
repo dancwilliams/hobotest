@@ -1,0 +1,6 @@
+_id: f9f784a0-ecea-11e7-9e3d-bfba8dc81df7
+_parent: test-1
+name: test reply
+email: ''
+body: test reply with default value set
+date: '2017-12-29T22:52:42.157Z'
