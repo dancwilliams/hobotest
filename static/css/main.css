@@ -746,6 +746,13 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
   width: 100%;
 }
 
+.post-comment-reply {
+  background-color: #eee;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 4.5em
+}
+
 .btn {
   border: 2px solid #F76C5E;
   background-color: #F76C5E;
